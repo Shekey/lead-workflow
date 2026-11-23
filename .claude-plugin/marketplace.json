@@ -1,0 +1,15 @@
+{
+  "name": "shekey",
+  "description": "Plugins by Ajdin",
+  "owner": {
+    "name": "Ajdin",
+    "url": "https://github.com/Shekey"
+  },
+  "plugins": [
+    {
+      "name": "lead-workflow",
+      "source": "./",
+      "description": "Classify tasks, route work to Haiku, Sonnet or Opus, and always finish with a review."
+    }
+  ]
+}

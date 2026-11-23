@@ -1,0 +1,14 @@
+{
+  "name": "lead-workflow",
+  "displayName": "Lead Workflow",
+  "version": "0.1.0",
+  "description": "Classify a task by judgment, scope and risk, route work to the cheapest model that does it well, and finish with a review that fits the risk. Covers code and Figma design.",
+  "author": {
+    "name": "Ajdin",
+    "url": "https://shekeyweb.com"
+  },
+  "homepage": "https://github.com/Shekey/lead-workflow",
+  "repository": "https://github.com/Shekey/lead-workflow",
+  "license": "MIT",
+  "keywords": ["workflow", "model-routing", "code-review", "figma", "subagents"]
+}

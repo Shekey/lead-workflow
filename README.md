@@ -41,25 +41,42 @@ The agent loads only the guide that matches the task.
 
 ## Install
 
-Claude Code, for one project:
+### Claude Code plugin (recommended)
 
-```bash
-mkdir -p .claude/skills
-cp -r skills/lead-workflow .claude/skills/
+```
+/plugin install lead-workflow --marketplace Shekey/lead-workflow
 ```
 
-Claude Code, for all your projects: copy `skills/lead-workflow` into `~/.claude/skills/`.
+Or in two steps:
 
-Claude apps: zip the `skills/lead-workflow` folder and upload it under your skills settings.
+```bash
+claude plugin marketplace add Shekey/lead-workflow
+claude plugin install lead-workflow@shekey
+```
 
-Other tools: copy the folder to wherever the tool loads skills from.
+Update later with `claude plugin marketplace update shekey`.
+
+### As a plain skill (Claude apps, Cursor, Codex, Copilot and other tools)
+
+Copy `skills/lead-workflow` to wherever your tool loads skills from, for example `~/.claude/skills/` or a project's `.claude/skills/`. For the Claude apps, zip the folder and upload it in your skills settings.
+
+### Try it before installing
+
+```bash
+git clone https://github.com/Shekey/lead-workflow
+claude --plugin-dir ./lead-workflow
+```
 
 ## Use
 
-Start the session on Sonnet, then either invoke it directly (`/lead-workflow` in Claude Code) or add one line to your project instructions (CLAUDE.md or AGENTS.md):
+Start the session on Sonnet (`claude --model sonnet`) and describe the change you want. The skill triggers from its description, so you don't need to name it. To force it, run `/lead-workflow:lead-workflow` (plugin) or `/lead-workflow` (plain skill).
+
+To set the level yourself, start the request with it: `trivial: rename userId to customerId`.
+
+For more reliable triggering, add one line to your project instructions (CLAUDE.md or AGENTS.md):
 
 ```
-For any coding or design task, follow the lead-workflow skill.
+For changes to code or Figma designs, follow the lead-workflow skill.
 ```
 
 For design work, connect a Figma connector first and give the agent a link to the file or frame.

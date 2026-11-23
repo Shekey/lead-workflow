@@ -36,7 +36,18 @@ Rate the task on three questions, using the domain guide's examples:
 | Medium | Anything else that isn't Large. High risk alone makes a task Medium: risk changes the review, not the size of the process |
 | Large | High judgment or High scope |
 
-Skip the task if it's already done, out of scope, or not worth doing, and say why. If requirements are ambiguous, ask before planning. If a task turns out bigger than its level, stop and reclassify.
+How to classify:
+- Classify from the request and a light look (which files or frames, which area). Don't read the whole project to classify a small task.
+- When unsure, rate risk one step higher: under-rating it skips the review that would catch the problem. Rate judgment and scope from what you know now; those mistakes show up during the work and are cheap to fix.
+- State the result in one line before starting, for example `Level: Medium (judgment Low, scope Medium, risk Low)`. If the user gave a level ("trivial:", "large:"), use theirs.
+
+Reclassify when any of these happens:
+- You need to change files or components that weren't in the plan.
+- You find a high-risk area.
+- A check fails in a way you didn't expect.
+- The work needs about twice as many changes as you estimated.
+
+Skip the task if it's already done, out of scope, or not worth doing, and say why. If requirements are ambiguous, ask before planning.
 
 ### 3. Path
 
