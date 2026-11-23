@@ -15,7 +15,11 @@ It works for code and for design in Figma. It follows the open [Agent Skills](ht
 |---|---|
 | Sonnet | Leads the session, implements, reviews routine work |
 | Haiku | Searching, reading, running checks, mechanical edits |
-| Opus | Plans large tasks, hard debugging, reviews risky changes |
+| Opus | Only when escalation rules fire: risky areas, irreversible actions, real trade-offs, problems Sonnet couldn't solve |
+
+When the same problem fails twice, the lead diagnoses why before trying again. Missing information goes to the user as a question; a reasoning problem gets one Opus attempt. No problem gets more than 3 attempts.
+
+To tune the escalation rules on your own work, ask for calibration mode: both models review each task and the differences are logged.
 
 Where the tool can't spawn subagents or pick models, the skill runs every step itself and does the review as a structured self-review.
 
