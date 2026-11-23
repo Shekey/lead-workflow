@@ -6,9 +6,17 @@
 - Find the real verification commands in package.json scripts, Makefile, or CI config: lint, typecheck, tests, build. Use exactly these commands from here on.
 - Note the conventions: folder structure, naming, state management, error handling, test style. New code follows them.
 
-## Trivial examples
+## Level examples
 
-A typo or copy fix, a one-line bug fix, renaming a variable in one file, a small config change. Roughly 20 lines or less, in 1-2 files, with no change to behavior other than the intended one.
+- **Trivial:** a typo or copy fix; a rename done with IDE refactoring or a codemod, even across many files; changing a config value; an obvious one-line fix where the cause is already known.
+- **Medium:** a bug fix that needs investigation inside one feature; a new component, hook or endpoint that follows an existing pattern; a refactor within one module.
+- **Large:** a feature spanning frontend and backend, or several modules; introducing a new pattern or library; migrating from one approach to another; performance work across modules.
+
+## Risk examples
+
+- **High:** authentication and authorization, payments, data migrations and schema changes, public API contracts, major dependency upgrades, CI/CD and infrastructure, personal data, anything irreversible.
+- **Medium:** user-facing behavior, state management, caching, concurrency, error-handling paths.
+- **Low:** styling, copy, internal naming, test-only changes, anything the typecheck and tests fully cover.
 
 ## Constraints for briefs
 
@@ -33,10 +41,6 @@ A typo or copy fix, a one-line bug fix, renaming a variable in one file, a small
 - No unrelated changes, no leftover debug code, no narrating comments.
 - New behavior has tests; changed behavior has updated tests.
 - No secrets, no unsafe input handling, no new injection or XSS paths.
-
-## Risky (always add an `opus` reviewer)
-
-Authentication and authorization, payments, data migrations and schema changes, public API contracts, dependency upgrades, CI/CD and infrastructure, anything touching personal data.
 
 ## Finish
 

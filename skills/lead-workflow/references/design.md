@@ -10,9 +10,17 @@ If the connector ships its own skills (for example a skill you must load before 
 - Find the design system: connected libraries, components, variables (color, spacing, radius, typography) and text styles.
 - Look at 1-2 existing screens that are close to the task. New work matches their structure, spacing and naming.
 
-## Trivial examples
+## Level examples
 
-Changing copy, swapping an icon or image, switching a component variant, adjusting one property on a single frame. Nothing that touches shared components, variables or library styles.
+- **Trivial:** changing copy, swapping an icon or image, switching a component variant, adjusting one property on one frame, renaming layers.
+- **Medium:** a new screen or a few frames built from existing components; a new variant of a local component; reworking one section of a screen.
+- **Large:** a flow across several screens; a new component set; restructuring part of the design system.
+
+## Risk examples
+
+- **High:** main components, variables or styles used across the file, library publishing, deleting or restructuring pages, anything in a shared library other files consume.
+- **Medium:** screens already handed off to development, local components used in several places.
+- **Low:** exploration pages, new drafts, single frames nothing else references.
 
 ## Constraints for briefs
 
@@ -22,7 +30,7 @@ Changing copy, swapping an icon or image, switching a component variant, adjusti
 - Name layers meaningfully; no "Frame 123" in delivered work.
 - Change only the frames or components you own.
 - Never publish a library, and never edit main components or variables, unless the brief says so.
-- When the connector supports branches, do Standard and Large write work on a branch.
+- When the connector supports branches, do Medium and Large write work on a branch.
 
 ## Checks
 
@@ -43,10 +51,6 @@ The reviewer gets the brief, a screenshot of each changed frame, and the node st
 - Accessibility beyond contrast: target sizes, focus order, readable type sizes.
 - Edge cases: long text, missing images, empty and error states.
 - Ready for handoff: a developer could build it without guessing.
-
-## Risky (always add an `opus` reviewer)
-
-Changes to main components, variables or styles used across the file, library publishing, deleting or restructuring pages, anything touching a shared library that other files consume.
 
 ## Finish
 
