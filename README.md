@@ -43,18 +43,22 @@ The agent loads only the guide that matches the task.
 
 ### Claude Code plugin (recommended)
 
+lead-workflow is listed in the `shekey` marketplace, which lives in [Shekey/claude-craft](https://github.com/Shekey/claude-craft):
+
 ```
-/plugin install lead-workflow --marketplace Shekey/lead-workflow
+/plugin install lead-workflow --marketplace Shekey/claude-craft
 ```
 
 Or in two steps:
 
 ```bash
-claude plugin marketplace add Shekey/lead-workflow
+claude plugin marketplace add Shekey/claude-craft
 claude plugin install lead-workflow@shekey
 ```
 
 Update later with `claude plugin marketplace update shekey`.
+
+The same marketplace lists [craft](https://github.com/Shekey/claude-craft). Both plugins plan, route and review tasks, so enable one of them at a time.
 
 ### As a plain skill (Claude apps, Cursor, Codex, Copilot and other tools)
 
